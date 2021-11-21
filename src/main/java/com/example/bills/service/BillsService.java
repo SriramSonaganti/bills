@@ -29,8 +29,8 @@ public class BillsService {
         return bill;
     }
 
-    public Bills getByDue(String date){
-        Bills bill = billsRepository.findByDue(date);
+    public List<Bills> getByDue(String date){
+        List<Bills> bill = billsRepository.findByDue(date);
         return bill;
     }
 

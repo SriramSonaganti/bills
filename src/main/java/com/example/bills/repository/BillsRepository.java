@@ -16,7 +16,7 @@ public interface BillsRepository extends MongoRepository<Bills,Long> {
 
    Bills findByNumber(String bill_number);
 
-   Bills findByDue(String due);
+   List<Bills> findByDue(String due);
 
 
 }

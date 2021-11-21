@@ -37,7 +37,7 @@ public class BillsController {
     }
 
     @GetMapping("/bills/due/{date}")
-    public  ResponseEntity<Bills> getBillsByDue(@PathVariable @RequestBody String date){
+    public  ResponseEntity<List<Bills>> getBillsByDue(@PathVariable @RequestBody String date){
         return new ResponseEntity<>(billsService.getByDue(date),HttpStatus.OK);
     }
 
